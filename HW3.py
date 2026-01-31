@@ -76,7 +76,7 @@ class CouponDispenser:
         random_index = random.randint(0, len(self.coupon_cards) - 1)
         self.customer_roster.append(name)
         self.issued_indices.append(random_index)
-        return self.coupon_card[random_index]
+        return self.coupon_cards[random_index]
 
     def distribute_session(self):
         """
@@ -96,10 +96,10 @@ class CouponDispenser:
         # TODO: Implement per instructions 
         round_number = 1
         while True:
-            user_input = input(f"Round {round_number} - Enter a name (or names), 'show', or 'exit': ")
+            user_input = input(f"Round {round_number} - Enter a name (or comma-separated names), 'show', or 'exit': ")
 
             if user_input == "exit":
-                print("Goodbye! ")
+                print("Goodbye!")
                 break
             elif user_input == "show":
                 for i in range(len(self.customer_roster)):
@@ -138,7 +138,7 @@ class CouponDispenser:
             return
         for i in range(len(self.coupon_cards)):
             count = 0
-            for issued_index in self.issued_indicies:
+            for issued_index in self.issued_indices:
                 if issued_index == i:
                     count += 1
             print(f"{self.coupon_cards[i]} distribution count: {count}.")
