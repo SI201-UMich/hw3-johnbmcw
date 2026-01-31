@@ -65,7 +65,18 @@ class CouponDispenser:
             str: message as described above
         """
         # TODO: Implement per instructions
-        pass
+        if not self.coupon_cards:
+            return "The box is empty."
+        
+        if name in self.customer_roster:
+            name_index = self.customer_roster.index(name)
+            coupon_index = self.issued_indices[name_index]
+            coupon = self.coupon_cards[coupon_index]
+            return f"That name already has a coupon: {coupon}"
+        random_index = random.randint(0, len(self.coupon_cards) - 1)
+        self.customer_roster.append(name)
+        self.issued_indices.append(random_index)
+        return self.coupon_card[random_index]
 
     def distribute_session(self):
         """
@@ -83,7 +94,8 @@ class CouponDispenser:
         Reminder: Use lists only (no dictionaries).
         """
         # TODO: Implement per instructions 
-        pass
+        rnd_nmbr1 = 1
+        while True:
 
     def tally_distribution(self):
         """
