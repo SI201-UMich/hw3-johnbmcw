@@ -1,12 +1,12 @@
 # Name: John McWilliams
 # Student ID: 3485 4614
 # Email: johnmcw@umich.edu
-# Who or what you worked with on this homework (including generative AI like ChatGPT):
-# If you worked with generative AI also add a statement for how you used it.
+# Who or what you worked with on this homework (including generative AI like ChatGPT): None, used GenAI to check for errors when I couldn't find exactly what was wrong.
+# If you worked with generative AI also add a statement for how you used it. I was a bit confused on what I got wrong for a couple small parts, so I had GenAI teach me so I could figure out the right answer.
 # e.g.:
 # Asked ChatGPT hints for debugging and suggesting the general structure of the code
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
-#    your Gen AI contract? If not, why?
+#    your Gen AI contract? If not, why? Yes, because the code I submitted is my work, and all it did was help me undes
 
 import random
 import io
@@ -96,7 +96,7 @@ class CouponDispenser:
         # TODO: Implement per instructions 
         round_number = 1
         while True:
-            user_input = input(f"Round {round_number} - Enter a name (or comma-separated names), 'show', or 'exit': ")
+            user_input = input(f"Round {round_number} - Enter a name (or a comma-separated list), or type 'show' or 'exit': ")
 
             if user_input == "exit":
                 print("Goodbye!")
@@ -444,5 +444,5 @@ def test():
 
 if __name__ == "__main__":
     main()
-    # test()
+    #test()
 
